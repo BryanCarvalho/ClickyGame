@@ -3,7 +3,6 @@ import CartoonsCard from "./components/CartoonsCard";
 import { Col, Row, Container } from "./components/Grid";
 import { Jumbotron, Title, Score } from "./components/Jumbotron";
 import cartoon from "./cartoon.json";
-
 import './bootstrap.min.css';
 
 function shuffle(arr) {

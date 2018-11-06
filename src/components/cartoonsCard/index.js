@@ -1,3 +1,3 @@
-import cartoonsCard from './CartoonsCard';
+import CartoonsCard from './CartoonsCard';
 
-export default cartoonsCard;
+export default CartoonsCard;
