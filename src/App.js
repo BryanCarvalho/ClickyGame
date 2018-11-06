@@ -4,7 +4,10 @@ import { Col, Row, Container } from "./components/Grid";
 import { Jumbotron, Title, Score } from "./components/Jumbotron";
 import cartoon from "./cartoon.json";
 
-function shuffle(array) {
+import './bootstrap.min.css';
+
+function shuffle(arr) {
+  const array = arr.concat();
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];

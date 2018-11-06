@@ -5,7 +5,7 @@ const imageStyle = {
 };
 
 const CartoonsCard = props => (
-    <div className="card mb-3"
+    <div className="card mb-3" style={{ marginBottom: '30px'}}
         value={props.id}
         onClick={() => props.handleClick(props.id)}>
         <div className="img-container">
