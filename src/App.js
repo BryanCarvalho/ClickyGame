@@ -34,7 +34,7 @@ class App extends Component {
 
   handleIncrement = () => {
     const newScore = this.state.currentScore + 1;
-    console.log(newScore);
+    //console.log(newScore);
     this.setState({
       currentScore: newScore,
     });
@@ -42,7 +42,7 @@ class App extends Component {
       this.setState({ topScore: newScore });
     }
     if (newScore === 12) {
-      console.log("Are we running this?")
+      //console.log("Are we running this?")
       this.setState({ message: "Congratulations! You win!" });
     }
     this.handleShuffle();
@@ -71,7 +71,7 @@ class App extends Component {
             <Jumbotron>
               <Title>
                 <h1>
-                  Gotta Catch 'em All!
+                  Clicky-Clicky!
               </h1>
               </Title>
             </Jumbotron>
@@ -104,7 +104,7 @@ class App extends Component {
         </Row>
         <Row>
           {this.state.cartoon.map(cartoon => (
-            <Col size="md-3 sm-6">
+            <Col size="md-3 sm-3">
               <CartoonsCard
                 key={cartoon.id}
                 handleClick={this.handleClick}
