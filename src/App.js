@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import cartoonsCard from "./components/cartoonsCard";
-import { Col, Row, Container } from "./components/grid";
-import { Jumbotron, Title, Score } from "./components/jumbotron";
-import cartoons from "./cartoons.json";
+import CartoonsCard from "./components/CartoonsCard";
+import { Col, Row, Container } from "./components/Grid";
+import { Jumbotron, Title, Score } from "./components/Jumbotron";
+import cartoon from "./cartoon.json";
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -15,7 +15,7 @@ function shuffle(array) {
 class App extends Component {
 
   state = {
-    cartoons,
+    cartoon,
     currentScore: 0,
     topScore: 0,
     message: "",
@@ -59,8 +59,8 @@ class App extends Component {
   };
 
   handleShuffle = () => {
-    let shuffled = shuffle(cartoons);
-    this.setState({ cartoons: shuffled });
+    let shuffled = shuffle(cartoon);
+    this.setState({ cartoon: shuffled });
   };
 
   render() {
@@ -103,16 +103,16 @@ class App extends Component {
           </Col>
         </Row>
         <Row>
-          {this.state.cartoons.map(cartoons => (
+          {this.state.cartoon.map(cartoon => (
             <Col size="md-3 sm-6">
-              <cartoonsCard
-                key={cartoons.id}
+              <CartoonsCard
+                key={cartoon.id}
                 handleClick={this.handleClick}
                 handleIncrement={this.handleIncrement}
                 handleReset={this.handleReset}
                 handleShuffle={this.handleShuffle}
-                id={cartoons.id}
-                image={cartoons.image}
+                id={cartoon.id}
+                image={cartoon.image}
               />
             </Col>
           ))}
@@ -121,5 +121,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

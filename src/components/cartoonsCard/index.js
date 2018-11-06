@@ -1,1 +1,3 @@
-export { default } from "./cartoonsCard";
+import cartoonsCard from './CartoonsCard';
+
+export default cartoonsCard;

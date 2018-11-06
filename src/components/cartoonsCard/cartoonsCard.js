@@ -4,7 +4,7 @@ const imageStyle = {
     width: '100%'
 };
 
-const cartoonsCard = props => (
+const CartoonsCard = props => (
     <div className="card mb-3"
         value={props.id}
         onClick={() => props.handleClick(props.id)}>
@@ -14,4 +14,4 @@ const cartoonsCard = props => (
     </div>
 );
 
-export default cartoonsCard;
+export default CartoonsCard;
